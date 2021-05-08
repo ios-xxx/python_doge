@@ -1,6 +1,5 @@
 
-name:'doge Price'
-
+name: Doge Price
 
 on:
   schedule:
