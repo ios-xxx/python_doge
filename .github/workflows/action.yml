@@ -1,7 +1,7 @@
 
 name:'doge Price'
 
-on:
+on: jobs
   push:
     branches: 
       - master
