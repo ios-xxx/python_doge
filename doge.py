@@ -29,24 +29,24 @@ class DingTalk_Disaster(DingTalk_Base):
 if __name__ == '__main__':
     dogeUrl = 'https://api.hbdm.com/linear-swap-ex/market/history/kline?contract_code=DOGE-USDT&period=1min&size=1'
         
-    while True:
+    #while True:
             
-        dogeResponse =  requests.get(dogeUrl)
-        dogeJson = json.loads(dogeResponse.text)
-        dogeData = dogeJson['data']
-        dogeData = dogeData[-1]
-        print(dogeData)
+    dogeResponse =  requests.get(dogeUrl)
+    dogeJson = json.loads(dogeResponse.text)
+    dogeData = dogeJson['data']
+    dogeData = dogeData[-1]
+    print(dogeData)
+
+    cny = 6.5555
+    dogeHeight = Decimal(dogeData['high'] * cny).quantize(Decimal('0.000000'))
+    dogeLow = Decimal(dogeData['low'] * cny).quantize(Decimal('0.000000'))
+    dogeClose = Decimal(dogeData['close'] * cny).quantize(Decimal('0.000000'))
+    msgContent = '狗狗币\n最新价格: {} 最高价 {}  最低价 {} \nusdt价格: {} 最高价 {}  最低价 {}\t '.format(dogeClose,dogeHeight,dogeLow,dogeData['close'],dogeData['high'],dogeData['low'])
+    #print(dogeJson['data'])
     
-        cny = 6.5555
-        dogeHeight = Decimal(dogeData['high'] * cny).quantize(Decimal('0.000000'))
-        dogeLow = Decimal(dogeData['low'] * cny).quantize(Decimal('0.000000'))
-        dogeClose = Decimal(dogeData['close'] * cny).quantize(Decimal('0.000000'))
-        msgContent = '狗狗币\n最新价格: {} 最高价 {}  最低价 {} \nusdt价格: {} 最高价 {}  最低价 {}\t '.format(dogeClose,dogeHeight,dogeLow,dogeData['close'],dogeData['high'],dogeData['low'])
-        #print(dogeJson['data'])
-        
-        ding = DingTalk_Disaster()
-        
-        
-        ding.send_msg(msgContent)
-        time.sleep(10)
+    ding = DingTalk_Disaster()
+    
+    
+    ding.send_msg(msgContent)
+        #time.sleep(10)
     
