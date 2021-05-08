@@ -1,7 +1,7 @@
 
 name:'doge Price'
 
-on: jobs
+on:
   push:
   schedule:
     - cron: '* * * * *'
