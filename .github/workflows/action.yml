@@ -3,8 +3,6 @@ name:'doge Price'
 
 on: jobs
   push:
-    branches: 
-      - master
   schedule:
     - cron: '* * * * *'
 jobs:
