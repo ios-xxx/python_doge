@@ -1,12 +1,10 @@
 
 name:'doge Price'
 
+
 on:
-  push:
-    branches: 
-      - master
   schedule:
-    - cron: '* * * * *'
+    - cron:  '* * * * *'
   watch:
     types: [started]
 jobs:
