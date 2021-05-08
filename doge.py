@@ -41,7 +41,7 @@ if __name__ == '__main__':
     dogeHeight = Decimal(dogeData['high'] * cny).quantize(Decimal('0.000000'))
     dogeLow = Decimal(dogeData['low'] * cny).quantize(Decimal('0.000000'))
     dogeClose = Decimal(dogeData['close'] * cny).quantize(Decimal('0.000000'))
-    msgContent = '狗狗币\n最新价格: {} 最高价 {}  最低价 {} \nusdt价格: {} 最高价 {}  最低价 {}\t '.format(dogeClose,dogeHeight,dogeLow,dogeData['close'],dogeData['high'],dogeData['low'])
+    msgContent = '狗狗币\n最新价格: {} \n最高价 {}  最低价 {} \nusdt价格: {} 最高价 {}  最低价 {}\t '.format(dogeClose,dogeHeight,dogeLow,dogeData['close'],dogeData['high'],dogeData['low'])
     #print(dogeJson['data'])
     
     ding = DingTalk_Disaster()
