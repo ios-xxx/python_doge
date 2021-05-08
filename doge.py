@@ -45,8 +45,6 @@ if __name__ == '__main__':
     #print(dogeJson['data'])
     
     ding = DingTalk_Disaster()
-    
-    
     ding.send_msg(msgContent)
         #time.sleep(10)
     
