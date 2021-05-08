@@ -48,5 +48,5 @@ if __name__ == '__main__':
         
         
         ding.send_msg(msgContent)
-        time.sleep(10)
+        time.sleep(60)
     
