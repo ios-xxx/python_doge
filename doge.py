@@ -37,7 +37,7 @@ if __name__ == '__main__':
     dogeData = dogeData[-1]
     print(dogeData)
 
-    cny = 6.5555
+    cny = 1.0
     dogeHeight = Decimal(dogeData['high'] * cny).quantize(Decimal('0.000000'))
     dogeLow = Decimal(dogeData['low'] * cny).quantize(Decimal('0.000000'))
     dogeClose = Decimal(dogeData['close'] * cny).quantize(Decimal('0.000000'))
